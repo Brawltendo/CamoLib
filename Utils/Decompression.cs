@@ -9,7 +9,7 @@ using zlib;
 
 namespace CamoLib.Utils
 {
-    public class DecompressionUtils
+    public class Decompression
     {
         public static byte[] DecompressData(byte[] buffer)
         {
