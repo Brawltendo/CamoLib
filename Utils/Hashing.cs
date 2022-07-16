@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 
 namespace CamoLib.Hashing
 {
+
+    /// <summary>
+    /// Contains methods for calculating a type or resource name hash.
+    /// </summary>
     public class Hash12
     {
         private static uint[] Hash12Table = new uint[256]
@@ -61,6 +65,10 @@ namespace CamoLib.Hashing
         }
     }
 
+    /// <summary>
+    /// Contains methods for calculating a CRC32 hash.
+    /// This is most commonly used in the engine to hash field names (eg: Counter_steer_yaw_torque -> 0x179FE51E)
+    /// </summary>
     public class EACrc32
     {
         private static uint[] Crc32Table = new uint[256]

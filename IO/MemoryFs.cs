@@ -14,14 +14,8 @@ namespace CamoLib.IO
     public class MemoryFs
     {
 
-        public static MemoryFs AppFs;
-
         public class FsFile
         {
-            /// <summary>
-            /// Cached ID for this file if type == GeneSysDefinition
-            /// </summary>
-            public int TypeId => typeId;
             //public string Path => filePath;
             /// <summary>
             /// The name of this file/directory
@@ -32,7 +26,6 @@ namespace CamoLib.IO
             /// </summary>
             public bool IsFolder => isFolder;
 
-            private int typeId = -1;
             private byte[] itemData;
             private bool isFolder;
             //private string filePath;
@@ -156,12 +149,7 @@ namespace CamoLib.IO
         #endregion
 
         #region -- Fields --
-        /// <summary>
-        /// Cache of this bundle's GeneSysDefinition files for faster loading/usage
-        /// </summary>
-        public Dictionary<uint, FsFile> DefinitionCache;
         private string fsObjPath;
-        private GeneSysVersion engineVer;
         private bool initialized = false;
         private FsFile rootDir;
         #endregion
@@ -171,11 +159,15 @@ namespace CamoLib.IO
         /// </summary>
         /// <param name="filepath">The path on the hard drive to a GeneSys bundle</param>
         /// <param name="ver">The engine version, used for determining how to unpack and read files</param>
-        public MemoryFs(string filepath, GeneSysVersion ver)
+        public MemoryFs(string filepath)
         {
+            if (filepath == null || filepath == "")
+            {
+                MessageBox.Show($"No file path was provided. Try again!");
+                return;
+            }
+
             fsObjPath = filepath;
-            engineVer = ver;
-            DefinitionCache = new Dictionary<uint, FsFile>();
             rootDir = new FsFile(RootDirName);
             initialized = true;
             //switch (ver)

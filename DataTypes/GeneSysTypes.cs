@@ -24,50 +24,6 @@ namespace CamoLib
 
 namespace CamoLib.DataTypes
 {
-    public class GeneSys1ResourceBase
-    {
-        public int ResourceType { get; set; }
-        public int ResourceID { get; set; }
-        public int FieldStartOffset { get; set; }
-        public uint NumOfFields { get; set; }
-        public byte ResourceIndex { get; set; }
-        public string ResourceClassName { get; set; }
-        public List<GeneSys1FieldDef> Fields { get; set; }
-    }
-
-    public class GeneSys1FieldDef 
-    { 
-        public int FieldHash { get; set; }
-        public EValueType FieldType { get; set; }
-        public int Elements { get; set; }
-        public int FieldOffset { get; set; }
-        public int FieldLength { get; set; }
-    }
-
-    public class GeneSys1InstanceBase
-    {
-        public int Offset { get; set; }
-        public int InstanceBaseClass { get; set; }
-        public int InstanceID { get; set; }
-    }
-
-    public class GeneSys1InstanceChild
-    {
-        public int Offset { get; set; }
-        public int InstanceBaseClass { get; set; }
-    }
-
-    public class GeneSys1ArrayPointer
-    {
-        public int Offset { get; set; }
-        public int Elements { get; set; }
-        public int unk { get; set; }
-
-        public static implicit operator GeneSys1ArrayPointer(GeneSys1InstanceChild v)
-        {
-            throw new NotImplementedException();
-        }
-    }
 
     public class GeneSysString
     {

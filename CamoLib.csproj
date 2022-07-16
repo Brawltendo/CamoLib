@@ -82,25 +82,23 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AssetLoaders\BaseAssetLoader.cs" />
+    <Compile Include="AssetLoaders\GeneSys1Loader.cs" />
     <Compile Include="Attributes\HiddenAttribute.cs" />
+    <Compile Include="DataTypes\Asset.cs" />
     <Compile Include="DataTypes\GeneSys1\GeneSys1Field.cs" />
     <Compile Include="DataTypes\GeneSys1\GeneSys1Instance.cs" />
     <Compile Include="DataTypes\GeneSys1\GeneSys1Definition.cs" />
     <Compile Include="DataTypes\GeneSys1\VariableArrayType.cs" />
     <Compile Include="DataTypes\GeneSysTypes.cs" />
-    <Compile Include="Dialogs\OpenFolderDialog.cs" />
     <Compile Include="IO\Endian.cs" />
     <Compile Include="IO\MemoryFs.cs" />
     <Compile Include="IO\Readers\CamoStreamReader.cs" />
     <Compile Include="IO\Readers\GeneSys1\DataTypesReader.cs" />
-    <Compile Include="IO\Readers\GeneSys1\GeneSys1Reader.cs" />
-    <Compile Include="IO\Unpackers\GeneSys1Unpacker.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="IO\Readers\GeneSys1ReaderOld.cs" />
     <Compile Include="IO\Readers\NullTerminatedStringReader.cs" />
-    <Compile Include="Utils\DecompressionUtils.cs" />
-    <Compile Include="Utils\FindInstBaseClass.cs" />
-    <Compile Include="Utils\GetDataTypeToRead.cs" />
+    <Compile Include="Utils\Decompression.cs" />
+    <Compile Include="Utils\Hashing.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

@@ -11,7 +11,7 @@ namespace CamoLib.Utils
 {
     public class Decompression
     {
-        public static byte[] DecompressData(byte[] buffer)
+        public static byte[] DecompressDataZlib(byte[] buffer)
         {
             MemoryStream memOutput = new MemoryStream();
             ZOutputStream zipOut = new ZOutputStream(memOutput);

@@ -12,7 +12,7 @@ namespace CamoLib.DataTypes.GeneSys1
     /// <summary>
     /// Defines the layout of a class for use in an Instance.
     /// </summary>
-    public class GeneSys1Definition : Asset
+    public class GeneSys1Definition// : Asset
     {
         /// <summary>
         /// Unique ID for this resource.
